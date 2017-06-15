@@ -1,42 +1,42 @@
 $(window).scroll(function() {
     if ($(this).scrollTop() > 200){ // Set position from top to add class
-        $('.navbar').addClass("background");
-        $('.nav-transition').addClass("scroll-margin");
-        $('.nav-transition').removeClass("scroll-margin");
-       
-       
+      $('.navbar').addClass("background");
+      $('.nav-transition').addClass("scroll-margin");
+      $('.name').addClass("opacity-one");
+      $('.bio').addClass("opacity-two");
+
     } else {
-        $('.navbar').removeClass("background");
-        $('.nav-transition').removeClass("scroll-margin");
-        $('.nav-transition').removeClass("scroll-margin");
+      $('.navbar').removeClass("background");
+      $('.nav-transition').removeClass("scroll-margin");
+      $('.name').removeClass("opacity-one");
+      $('.bio').removeClass("opacity-two");
 
     }
-});
+      });
 
-$(document).ready(function(){
+$(window).scroll(function() {
 
+    if ( $(this).scrollTop() > 300 && $(this).scrollTop() < 950) { 
+      $('.head-shot').addClass("blue");
+      $('.name-two').addClass("name-two-fade");
+      $('.product-bio').addClass("product-bio-fade");
+      $('.product-one').removeClass("product-one-fade");
+      $('.product-two').removeClass("product-two-fade");
+      $('.product-three').removeClass("product-three-fade");
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-     nav: true,
-     navText: ["<img src='chevron-left.png'>","<img src='chevron-right.png'>"],
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:1,
-            nav:false
-        },
-        1000:{
-            items:1,
-            nav:true,
-            loop:true
-        }
+    } else {
+      $('.head-shot').removeClass("blue");
+      $('.name-two').removeClass("name-two-fade");
+      $('.product-bio').removeClass("product-bio-fade");
+      $('.product-one').addClass("product-one-fade");
+      $('.product-two').addClass("product-two-fade");
+      $('.product-three').addClass("product-three-fade");
+      
     }
-})
 
-});
+  });
+
+
+
+
+
