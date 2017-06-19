@@ -1,3 +1,16 @@
+
+
+    $(document).ready(function () {
+      $(".menu-btn a").click(function () {
+        $(".overlay").fadeToggle(200);
+        $("span.top-bar").toggleClass('btn-open-two');
+        $("span.bottom-bar").toggleClass('btn-open-one');
+        
+      });
+        });
+
+
+
 $(window).scroll(function() {
     if ($(this).scrollTop() > 200){ // Set position from top to add class
       $('.navbar').addClass("background");
@@ -17,7 +30,7 @@ $(window).scroll(function() {
 $(window).scroll(function() {
 
     if ( $(this).scrollTop() > 300 && $(this).scrollTop() < 950) { 
-      $('.head-shot').addClass("blue");
+      $('.education-section-header').addClass("blue");
       $('.name-two').addClass("name-two-fade");
       $('.product-bio').addClass("product-bio-fade");
       $('.product-one').removeClass("product-one-fade");
@@ -25,7 +38,7 @@ $(window).scroll(function() {
       $('.product-three').removeClass("product-three-fade");
 
     } else {
-      $('.head-shot').removeClass("blue");
+      $('.education-section-header').removeClass("blue");
       $('.name-two').removeClass("name-two-fade");
       $('.product-bio').removeClass("product-bio-fade");
       $('.product-one').addClass("product-one-fade");
